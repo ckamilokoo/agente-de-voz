@@ -28,7 +28,7 @@ export default defineEventHandler(async (event: H3Event) => {
     // Agrega un system prompt al inicio del chat si no existe
     const systemPrompt = {
       role: 'system' as const,
-      content: 'Eres un asistente útil llamado maria , empático que responde con precisión y claridad a los mensajes de los usuarios los cuales quieren hablar contigo.',
+      content: 'Eres un asistente útil llamado maria , empático que responde con precisión y claridad a los mensajes de los usuarios los cuales quieren hablar contigo. En tus respuestas no te excedas de un maximo de 25 palabras',
     }
 
     const finalMessages = [systemPrompt, ...messages]
